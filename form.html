@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Diri Mahasiswa</title>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <label for="nama">Nama</label> <br>
+        <input type="text" name="nama" id="nama" required><br>
+        <br>
+
+        <label for="email">Email</label> <br>
+        <input type="email" name="email" id="email" required><br>
+        <br>
+
+        <label for="no_hp">Nomor HP: </label><br>
+        <input type="tel" name="no_hp" id="no_hp" pattern="" required><br>
+        <br>
+
+        <label for="">Jenis Kelamin</label>
+        <br>
+        <input type="radio" name="jenkel" id="laki_laki" value="laki_laki">
+        <label for="laki_laki">Laki-Laki</label><br>
+
+        <input type="radio" name="jenkel" id="perempuan" value="perempuan">
+        <label for="perempuan">Perempuan</label><br><br>
+        
+
+        <label for="prodi">Prodi</label><br>
+        <select name="prodi" id="prodi" required>
+            <option value="">Pilih</option>
+            <option value="sistem_informasi">Sistem Informasi</option>
+            <option value="teknik_informatika">Teknik Informatika</option>
+            <option value="pendidikan_teknoinformasu">Pendidikan Teknologi Informasi</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="">Hobi</label><br>
+        <input type="checkbox"  id="membaca" name="membaca" value="membaca">
+        <label for="membaca">Membaca</label>
+        <br>
+        <input type="checkbox"  id="menulis" name="menulis" value="menulis">
+        <label for="menulis">Menulis</label>
+        <br>
+
+        <input type="checkbox"  id="menyanyi" name="menyanyi" value="menyanyi">
+        <label for="menyanyi">Menyanyi</label>
+        <br>
+
+        <input type="checkbox"  id="olahraga" name="olahraga" value="olahraga">
+        <label for="olahraga">Olahraga</label>
+        <br>
+        <br>
+
+        <label for="alamat">Alamat</label><br>
+        <textarea name="alamat" id="alamat" cols="50" rows="5" required></textarea><br>
+        <br>
+
+        <label for="foto">Foto Diri</label><br>
+        <input type="file" accept=".pdf,.png,.jpg" name="foto" id="foto" required><br>
+        <br>
+        
+        <input type="button" value="Daftar">
+    </form>
+</body>
+
+</html>
