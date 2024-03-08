@@ -6,7 +6,62 @@
     <title>Tugas Java Script</title>
 </head>
 <body>
-  <a href="jsdasar.html">Materi Java Script Dasar</a>
+  <div class="slideshow-container">
+    <!-- Gambar-gambar untuk slideshow -->
+    <div class="mySlides">
+        <img src="1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <img src="2.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+        <img src="3.jpeg" style="width:100%">
+    </div>
+
+    <!-- Tombol navigasi -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<!-- Dot navigasi -->
+<div class="dot-container" style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+  <a href="jsdasar.html">Materi Java Script Dasar</a><br><br>
   <a href="form.html">Form Data Diri Mahasiswa</a>
 </body>
 </html>
