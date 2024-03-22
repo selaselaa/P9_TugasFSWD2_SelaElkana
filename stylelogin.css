@@ -89,30 +89,29 @@ input {
 }
 
 
-@media (max-width: 880px) {
+@media (max-width: 600px) {
     .container {
-        width: 100%;
-        max-width: 750px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    form {
-        width: 300px;
-        margin: 20px auto;
+        grid-template-columns: 1fr; 
+        padding: 0 20px; 
     }
 
     .login {
-        width: 400px;
-        padding: 20px;
+        padding: 20px; 
+
+    form {
+        max-width: 300px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 880px) {
+    .right {
+        display: none; 
     }
 
-    button {
-        width: 100%;
+    .login {
+        width: 100%; 
     }
+}
 
-    .right img {
-        width: 100%;
-        height: 100%;
-    }
 }
